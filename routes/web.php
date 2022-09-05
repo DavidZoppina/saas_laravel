@@ -29,31 +29,9 @@ Route::get('/callback/{provider}', 'SocialController@callback');
 
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/home','HomeController@index');
     Route::get('/dashboard','DashboardController@index');
-    Route::get('/post','PublishAllController@index');
-    Route::get('/facebook_post','FacebookPostController@index');
-    Route::get('/instagram_post','InstagramPostController@index');
-    Route::get('/twitter_post','TwitterPostController@index');
-    Route::get('/schedules','SchedulesController@index');
-    Route::get('/account_manager','AccountManagerController@index');
-    Route::get('/file_manager','FileManagerController@index');
-    Route::get('/group_manager','GroupManagerController@index');
-    Route::get('/caption','CaptionController@index');
-    Route::get('/watermark','WatermarkController@index');
-    Route::get('/user_manager','UserManagerController@index');
-    Route::get('/user_manager/index','UserManagerController@index');
-    Route::get('/user_manager/report','UserManagerController@report');
-    Route::post('/user_manager/report','UserManagerController@post_report');
-    Route::get('/platforms','PlatformsController@index');
-    Route::get('/analytics','AnalyticsController@index');
-    Route::get('/team','TeamController@index');
-    Route::get('/social_inbox','SocialInboxController@index');
+    Route::get('/home','HomeController@index');
 
-    Route::get('/my_account/profile','MyAccountController@profile');
-    Route::get('/my_account/pricing_bill','MyAccountController@pricing_bill');
-    Route::get('/my_account/redeem_code','MyAccountController@redeem_code');
-    Route::get('/my_account/invoice_history','MyAccountController@invoice_history');
 
 });
 

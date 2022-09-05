@@ -1,8 +1,0 @@
-build/*
-vendor/*
-phpunit.xml
-composer.lock
-
-# phpstorm
-.idea
-.phpunit.result.cache

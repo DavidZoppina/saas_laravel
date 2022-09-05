@@ -175,7 +175,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         \Biscolab\ReCaptcha\ReCaptchaServiceProvider::class,
-        \Laravel\Socialite\SocialiteServiceProvider::class
+        \Laravel\Socialite\SocialiteServiceProvider::class,
+        \App\Providers\MenuServiceProvider::class
 
     ],
 

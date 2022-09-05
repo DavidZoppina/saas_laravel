@@ -39,6 +39,7 @@
     35 => 'App\\Providers\\RouteServiceProvider',
     36 => 'Biscolab\\ReCaptcha\\ReCaptchaServiceProvider',
     37 => 'Laravel\\Socialite\\SocialiteServiceProvider',
+    38 => 'App\\Providers\\MenuServiceProvider',
   ),
   'eager' => 
   array (
@@ -65,6 +66,7 @@
     20 => 'App\\Providers\\EventServiceProvider',
     21 => 'App\\Providers\\RouteServiceProvider',
     22 => 'Biscolab\\ReCaptcha\\ReCaptchaServiceProvider',
+    23 => 'App\\Providers\\MenuServiceProvider',
   ),
   'deferred' => 
   array (
