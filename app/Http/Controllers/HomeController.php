@@ -12,7 +12,9 @@ class HomeController extends Controller
      * @return void
      */
     public function __construct()
-    {}
+    {
+        $this->page_name = "Home";
+    }
 
     /**
      * Show the application dashboard.
@@ -21,6 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('backend.content.home.index');
+        return view('backend.content.home.index', ['page_name' => $this->page_name]);
     }
 }

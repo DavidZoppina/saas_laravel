@@ -587,6 +587,8 @@
     incomeChart.render();
   }
 
+
+
   // Expenses Mini Chart - Radial Chart
   // --------------------------------------------------------------------
   const weeklyExpensesEl = document.querySelector('#expensesOfWeek'),
@@ -611,19 +613,19 @@
             background: borderColor
           },
           dataLabels: {
-            show: true,
-            name: {
-              show: false
-            },
-            value: {
-              formatter: function (val) {
-                return '$' + parseInt(val);
-              },
-              offsetY: 5,
-              color: '#697a8d',
-              fontSize: '13px',
-              show: true
-            }
+            // show: true,
+            // name: {
+            //   show: false
+            // },
+            // value: {
+            //   formatter: function (val) {
+            //     return '$' + parseInt(val);
+            //   },
+            //   offsetY: 5,
+            //   color: '#697a8d',
+            //   fontSize: '13px',
+            //   show: false
+            // }
           }
         }
       },
@@ -655,6 +657,7 @@
         }
       }
     };
+
   if (typeof weeklyExpensesEl !== undefined && weeklyExpensesEl !== null) {
     const weeklyExpenses = new ApexCharts(weeklyExpensesEl, weeklyExpensesConfig);
     weeklyExpenses.render();

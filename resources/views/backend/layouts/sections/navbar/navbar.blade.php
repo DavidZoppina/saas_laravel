@@ -38,7 +38,13 @@
                     @endif
 
                     <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-
+                        <!-- Search -->
+                        <div class="navbar-nav align-items-center">
+                            <div class="nav-item d-flex align-items-center">
+                                {{isset($page_name)? $page_name: ""}}
+                            </div>
+                        </div>
+                        <!-- /Search -->
                         <ul class="navbar-nav flex-row align-items-center ms-auto">
                             <!-- User -->
                             <li class="nav-item navbar-dropdown dropdown-user dropdown">
@@ -75,7 +81,8 @@
                                                      document.getElementById('logout-form').submit();">
                                             <i class='bx bx-power-off me-2'></i>
                                             <span class="align-middle">Log Out</span>
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                                  class="d-none">
                                                 @csrf
                                             </form>
 

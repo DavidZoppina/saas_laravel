@@ -48,13 +48,13 @@
                 <div class="card-header">
                     <ul class="nav nav-pills" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" href="{{url('dashboard')}}"><i class='bx bx-data'></i> All</a>
+                            <a class="nav-link" href="{{url('dashboard')}}"><i class='bx bx-data'></i> All</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{url('dashboard/facebook')}}"><i class='bx bxl-facebook-circle'></i> Facebook</a>
                         </li>
                         <li class="nav-item">
-                            <a type="button" class="nav-link" href="{{url('dashboard/instagram')}}"><i class='bx bxl-instagram-alt'></i> Instagram</a>
+                            <a type="button" class="nav-link active" href="{{url('dashboard/instagram')}}"><i class='bx bxl-instagram-alt'></i> Instagram</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{url('dashboard/twitter')}}"><i class='bx bxl-twitter' ></i> Twitter</a>

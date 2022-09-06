@@ -1,81 +1,81 @@
 @extends('backend.layouts.commonMaster' )
 
 @php
-/* Display elements */
-$contentNavbar = true;
-$containerNav = ($containerNav ?? 'container-xxl');
-$isNavbar = ($isNavbar ?? true);
-$isMenu = ($isMenu ?? true);
-$isFlex = ($isFlex ?? false);
-$isFooter = ($isFooter ?? true);
-$customizerHidden = ($customizerHidden ?? '');
-$pricingModal = ($pricingModal ?? false);
+    /* Display elements */
+    $contentNavbar = true;
+    $containerNav = ($containerNav ?? 'container-xxl');
+    $isNavbar = ($isNavbar ?? true);
+    $isMenu = ($isMenu ?? true);
+    $isFlex = ($isFlex ?? false);
+    $isFooter = ($isFooter ?? true);
+    $customizerHidden = ($customizerHidden ?? '');
+    $pricingModal = ($pricingModal ?? false);
 
-/* HTML Classes */
-$navbarDetached = 'navbar-detached';
+    /* HTML Classes */
+    $navbarDetached = 'navbar-detached';
 
-/* Content classes */
-$container = ($container ?? 'container-xxl');
+    /* Content classes */
+    $container = ($container ?? 'container-xxl');
 @endphp
 
 
 @section('layoutContent')
-<div class="layout-wrapper layout-content-navbar {{ $isMenu ? '' : 'layout-without-menu' }}">
-  <div class="layout-container">
+    <div class="layout-wrapper layout-content-navbar {{ $isMenu ? '' : 'layout-without-menu' }}">
+        <div class="layout-container">
 
-    @if ($isMenu)
-    @include('backend/layouts/sections/menu/verticalMenu')
-    @endif
-
-
-    <!-- Layout page -->
-    <div class="layout-page">
-      <!-- BEGIN: Navbar-->
-      @if ($isNavbar)
-      @include('backend.layouts.sections.navbar.navbar')
-      @endif
-      <!-- END: Navbar-->
+        @if ($isMenu)
+            @include('backend/layouts/sections/menu/verticalMenu')
+        @endif
 
 
-      <!-- Content wrapper -->
-      <div class="content-wrapper">
-
-        <!-- Content -->
-        @if ($isFlex)
-        <div class="{{$container}} d-flex align-items-stretch flex-grow-1 p-0">
-          @else
-          <div class="{{$container}} flex-grow-1 container-p-y">
+        <!-- Layout page -->
+            <div class="layout-page">
+                <!-- BEGIN: Navbar-->
+            @if ($isNavbar)
+                @include('backend.layouts.sections.navbar.navbar')
             @endif
+            <!-- END: Navbar-->
 
-            @yield('content')
 
-            <!-- pricingModal -->
-            @if ($pricingModal)
-            @include('backend._partials/_modals/modal-pricing')
-            @endif
-            <!--/ pricingModal -->
+                <!-- Content wrapper -->
+                <div class="content-wrapper">
 
-          </div>
-          <!-- / Content -->
+                    <!-- Content -->
+                    @if ($isFlex)
+                        <div class="{{$container}} d-flex align-items-stretch flex-grow-1 p-0">
+                            @else
+                                <div class="{{$container}} flex-grow-1 container-p-y">
+                                @endif
 
-          <!-- Footer -->
-          @if ($isFooter)
-          @include('backend/layouts/sections/footer/footer')
-          @endif
-          <!-- / Footer -->
-          <div class="content-backdrop fade"></div>
+                                @yield('content')
+
+                                <!-- pricingModal -->
+                                @if ($pricingModal)
+                                    @include('backend._partials/_modals/modal-pricing')
+                                @endif
+                                <!--/ pricingModal -->
+
+                                </div>
+                                <!-- / Content -->
+
+                                <!-- Footer -->
+                            @if ($isFooter)
+                                @include('backend/layouts/sections/footer/footer')
+                            @endif
+                            <!-- / Footer -->
+                                <div class="content-backdrop fade"></div>
+                        </div>
+                        <!--/ Content wrapper -->
+                </div>
+                <!-- / Layout page -->
+            </div>
+
+        @if ($isMenu)
+            <!-- Overlay -->
+                <div class="layout-overlay layout-menu-toggle"></div>
+        @endif
+        <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+            <div class="drag-target"></div>
         </div>
-        <!--/ Content wrapper -->
-      </div>
-      <!-- / Layout page -->
-    </div>
-
-    @if ($isMenu)
-    <!-- Overlay -->
-    <div class="layout-overlay layout-menu-toggle"></div>
-    @endif
-    <!-- Drag Target Area To SlideIn Menu On Small Screens -->
-    <div class="drag-target"></div>
-  </div>
-  <!-- / Layout wrapper -->
-  @endsection
+        <!-- / Layout wrapper -->
+@endsection

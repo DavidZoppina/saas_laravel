@@ -4,7 +4,7 @@
             "url": "/dashboard",
             "name": "Dashboard",
             "icon": "menu-icon tf-icons bx bx-desktop",
-            "slug": "dashboard-analytics"
+            "slug": "dashboard"
         },
         {
             "url": "/home",
@@ -16,7 +16,7 @@
             "url": "/analytics",
             "name": "Analytics",
             "icon": "menu-icon tf-icons bx bx-trending-up",
-            "slug": "home"
+            "slug": "analytics"
         }
     ]
 }

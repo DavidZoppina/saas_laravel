@@ -30,9 +30,12 @@ Route::get('/callback/{provider}', 'SocialController@callback');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard','DashboardController@index');
+    Route::get('/dashboard/facebook','DashboardController@facebook');
+    Route::get('/dashboard/instagram','DashboardController@instagram');
+    Route::get('/dashboard/twitter','DashboardController@twitter');
+
     Route::get('/home','HomeController@index');
-
-
+    Route::get('/analytics','AnalyticsController@index');
 });
 
 

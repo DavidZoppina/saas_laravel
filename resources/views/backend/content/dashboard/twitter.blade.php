@@ -6,8 +6,6 @@
 <link rel="stylesheet" href="{{asset('assets/vendor/libs/apex-charts/apex-charts.css')}}">
 @endsection
 
-
-
 @section('vendor-script')
 <script src="{{asset('assets/vendor/libs/apex-charts/apexcharts.js')}}"></script>
 @endsection
@@ -40,7 +38,6 @@
         </div>
     </div>
 
-
     <div class="row">
         <!-- Expense Overview -->
         <div class="col-md-12 col-lg-12 order-1 mb-4">
@@ -48,7 +45,7 @@
                 <div class="card-header">
                     <ul class="nav nav-pills" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" href="{{url('dashboard')}}"><i class='bx bx-data'></i> All</a>
+                            <a class="nav-link" href="{{url('dashboard')}}"><i class='bx bx-data'></i> All</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{url('dashboard/facebook')}}"><i class='bx bxl-facebook-circle'></i> Facebook</a>
@@ -57,7 +54,7 @@
                             <a type="button" class="nav-link" href="{{url('dashboard/instagram')}}"><i class='bx bxl-instagram-alt'></i> Instagram</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{url('dashboard/twitter')}}"><i class='bx bxl-twitter' ></i> Twitter</a>
+                            <a class="nav-link active" href="{{url('dashboard/twitter')}}"><i class='bx bxl-twitter' ></i> Twitter</a>
                         </li>
                     </ul>
                 </div>
@@ -82,9 +79,7 @@
         </div>
         <!--/ Expense Overview -->
     </div>
-
 @endsection
-
 
 @section('page-script')
 {{--    <script src="{{asset('assets/js/dashboards-analytics.js')}}"></script>--}}
@@ -92,10 +87,8 @@
 <script>
     (function () {
         let  axisColor, shadeColor, borderColor;
-
         axisColor = config.colors.axisColor;
         borderColor = config.colors.borderColor;
-
         // Income Chart - Area chart
         // --------------------------------------------------------------------
         const incomeChartEl = document.querySelector('#incomeChart'),
@@ -194,8 +187,6 @@
             const incomeChart = new ApexCharts(incomeChartEl, incomeChartConfig);
             incomeChart.render();
         }
-
     })();
-
 </script>
 @endsection
